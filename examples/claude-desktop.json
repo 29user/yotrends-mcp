@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "yotrends": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-remote",
+        "https://yotrends.ai/mcp/",
+        "--header",
+        "Authorization: Bearer ytm_YOUR_TOKEN"
+      ]
+    }
+  }
+}

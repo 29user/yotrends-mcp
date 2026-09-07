@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "yotrends": {
+      "url": "https://yotrends.ai/mcp/",
+      "headers": {
+        "Authorization": "Bearer ytm_YOUR_TOKEN"
+      }
+    }
+  }
+}

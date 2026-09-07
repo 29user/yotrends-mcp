@@ -1,0 +1,25 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.29user/yotrends",
+  "description": "Live YouTube and TikTok trend data: search trends, track topics, and generate publish-ready text packs.",
+  "version": "1.0.0",
+  "websiteUrl": "https://yotrends.ai/en/create-content-from-trends/",
+  "repository": {
+    "url": "https://github.com/29user/yotrends-mcp",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://yotrends.ai/mcp/",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer token from YoTrends \u2192 Settings \u2192 Connect to AI. Starts with ytm_.",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "inputs": [
+    {
+      "type": "promptString",
+      "id": "yotrends-token",
+      "description": "YoTrends MCP token (starts with ytm_)",
+      "password": true
+    }
+  ],
+  "servers": {
+    "yotrends": {
+      "type": "http",
+      "url": "https://yotrends.ai/mcp/",
+      "headers": {
+        "Authorization": "Bearer ${input:yotrends-token}"
+      }
+    }
+  }
+}
