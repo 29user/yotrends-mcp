@@ -42,6 +42,28 @@ charges nothing.
 - A token: **YoTrends → Settings → Connect to AI**. Tokens start with `ytm_`.
   Treat one like a password; it carries your plan's access.
 
+## Which clients this works with today
+
+| Client | Works | How |
+|---|---|---|
+| Claude Code | yes | `--header` on `claude mcp add` |
+| Cursor | yes | `headers` in `mcp.json` |
+| VS Code | yes | `headers`, with the token as a prompted input |
+| Claude Desktop | yes | through `mcp-remote`, which passes the header |
+| Claude web and the Desktop connector UI | **not yet** | needs OAuth |
+
+The last row is a real limitation, not an oversight. Claude's custom-connector
+dialog takes a server URL and, optionally, an OAuth client ID and secret — there
+is no field for an arbitrary header, so a static bearer token cannot be entered.
+The MCP specification expects HTTP servers to authorise over OAuth 2.1: the
+server advertises its authorisation server through protected-resource metadata,
+the client discovers it from the `WWW-Authenticate` header on a 401, and the
+flow runs with PKCE.
+
+This server currently answers 401 with a plain `WWW-Authenticate: Bearer` and
+serves no `/.well-known/oauth-protected-resource`, so that discovery cannot
+start. Until OAuth lands, use one of the clients above.
+
 ## Setup
 
 ### Claude Code
