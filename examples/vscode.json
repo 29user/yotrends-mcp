@@ -10,7 +10,7 @@
   "servers": {
     "yotrends": {
       "type": "http",
-      "url": "https://yotrends.ai/mcp/",
+      "url": "https://app.yotrends.ai/mcp/",
       "headers": {
         "Authorization": "Bearer ${input:yotrends-token}"
       }

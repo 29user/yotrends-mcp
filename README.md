@@ -8,7 +8,7 @@ run — you point your client at an HTTPS endpoint and authenticate with a token
 from your YoTrends account.
 
 ```
-https://yotrends.ai/mcp/
+https://app.yotrends.ai/mcp/
 ```
 
 Transport: Streamable HTTP. Auth: `Authorization: Bearer ytm_…`.
@@ -69,7 +69,7 @@ start. Until OAuth lands, use one of the clients above.
 ### Claude Code
 
 ```bash
-claude mcp add --transport http yotrends https://yotrends.ai/mcp/ \
+claude mcp add --transport http yotrends https://app.yotrends.ai/mcp/ \
   --header "Authorization: Bearer ytm_YOUR_TOKEN"
 ```
 
@@ -84,7 +84,7 @@ Claude Desktop connects to remote servers through `mcp-remote`. Add this to
     "yotrends": {
       "command": "npx",
       "args": [
-        "-y", "mcp-remote", "https://yotrends.ai/mcp/",
+        "-y", "mcp-remote", "https://app.yotrends.ai/mcp/",
         "--header", "Authorization: Bearer ytm_YOUR_TOKEN"
       ]
     }
@@ -121,7 +121,9 @@ integration surface.
 ## Links
 
 - Product: https://yotrends.ai/en/
-- What the integration is for: https://yotrends.ai/en/create-content-from-trends/
+- Integration page, with the same config and the token walkthrough:
+  https://yotrends.ai/en/create-content-from-trends/
+- API and MCP overview: https://yotrends.ai/en/api/
 - Support: hello@yotrends.ai
 
 ## License

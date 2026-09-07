@@ -11,7 +11,7 @@
   "remotes": [
     {
       "type": "streamable-http",
-      "url": "https://yotrends.ai/mcp/",
+      "url": "https://app.yotrends.ai/mcp/",
       "headers": [
         {
           "name": "Authorization",
